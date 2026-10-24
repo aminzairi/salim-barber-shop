@@ -54,6 +54,12 @@ npm run serve            # → http://localhost:4173  (demo mode)
 #   demo@salimbarber.tn / demo1234   (DEMO ONLY)
 ```
 
+**Admin panel (owner):** [`/admin`](https://salim-barber-shop.netlify.app/admin) — upcoming
+bookings, cancel, block slots, live walk-in status. In demo mode use
+`demo@salimbarber.tn / demo1234`; in production it's the Supabase Auth account
+you create in "Go live" step 2. The page is `noindex` and not linked anywhere
+on the public site.
+
 ## Go live (Phase 2 backend)
 
 1. Create a [Supabase](https://supabase.com) project → SQL editor → run
