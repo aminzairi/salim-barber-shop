@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salim Barber Shop — Réservez en ligne | Tunis</title>
+  <meta name="description" content="Réservez votre coupe ou taille de barbe en ligne en 60 secondes. Salim Barber Shop, Avenue Habib Bourguiba, Tunis. Ouvert du lundi au samedi, 9h–20h." />
+  <meta name="theme-color" content="#0e0e10" />
+
+  <!-- i18n SEO: per-language URL variants (?lang=) — updated by JS on switch -->
+  <link rel="canonical" href="https://salimbarber.tn/" />
+  <link rel="alternate" hreflang="en" href="https://salimbarber.tn/?lang=en" />
+  <link rel="alternate" hreflang="fr" href="https://salimbarber.tn/?lang=fr" />
+  <link rel="alternate" hreflang="ar" href="https://salimbarber.tn/?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://salimbarber.tn/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Salim Barber Shop — Book online | Tunis" />
+  <meta property="og:description" content="Book your haircut in 60 seconds. Avenue Habib Bourguiba, Tunis." />
+  <meta property="og:url" content="https://salimbarber.tn/" />
+  <meta property="og:image" content="https://salimbarber.tn/img/og-cover.svg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:locale:alternate" content="ar_TN" />
+
+  <!-- Fonts: Inter (EN/FR) + Cairo (AR), swap so text renders immediately -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;600;800&display=swap" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/icon-192.png" />
+
+  <!-- LocalBusiness structured data (edit in one place: address/phone must match js/config.js) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Salim Barber Shop",
+    "alternateName": "صالون سليم للحلاقة",
+    "telephone": "+21622345678",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12, Avenue Habib Bourguiba",
+      "addressLocality": "Tunis",
+      "postalCode": "1000",
+      "addressCountry": "TN"
+    },
+    "priceRange": "10–22 TND",
+    "currenciesAccepted": "TND",
+    "paymentAccepted": "Cash, Credit Card",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skipToContent">Skip to main content</a>
+
+  <!-- ======================= Header ======================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Salim Barber Shop">
+        <svg class="brand-logo" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10 22 L21 8 M12 8 L23 22 M10 22 a2.2 2.2 0 1 0 0.01 0 M23 22 a2.2 2.2 0 1 0 0.01 0"
+                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name" id="brandName">Salim Barber Shop</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" data-i18n-attr="aria-label:nav.services" aria-label="Main menu">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#booking" data-i18n="nav.booking">Booking</a>
+        <a href="#barbers" data-i18n="nav.barbers">Our barbers</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.langLabel">
+          <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang="fr" lang="fr" aria-pressed="false">FR</button>
+          <button type="button" class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false">AR</button>
+        </div>
+        <a class="btn btn-primary btn-header" href="#booking" data-i18n="nav.book">Book now</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false"
+                aria-controls="mainNav" data-i18n-attr="aria-label:nav.toggleMenu">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================= Hero ======================= -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <h1 class="hero-title" data-i18n="hero.tagline">Savoir-faire traditionnel, style moderne.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Réservez votre place en 60 secondes.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#booking" data-i18n="hero.cta">Réserver</a>
+        </div>
+        <p class="hero-hours">
+          <span class="status-badge" id="openStatusBadge">…</span>
+          <span id="todayHours"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= Services ======================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title" data-i18n="services.title">Our services</h2>
+        <p class="section-sub" data-i18n="services.subtitle"></p>
+        <ul class="cards" id="servicesList" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <!-- ======================= Booking ======================= -->
+    <section class="section section-booking" id="booking">
+      <div class="container">
+        <h2 class="section-title" data-i18n="booking.title">Book your appointment</h2>
+        <p class="section-sub" id="bookingSubtitle" data-i18n="booking.subtitle"></p>
+
+        <!-- Phase 2 wizard mounts here when the backend is configured (js/wizard.js) -->
+        <div id="wizardMount" hidden></div>
+
+        <!-- Phase 1: WhatsApp-first booking form (always available as fallback) -->
+        <div class="card booking-card" id="whatsappBooking">
+          <p class="booking-intro" data-i18n="booking.intro"></p>
+          <form id="whatsappForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="wbService" data-i18n="booking.service"></label>
+                <select id="wbService" name="service" required></select>
+              </div>
+              <div class="field">
+                <label for="wbName" data-i18n="booking.name"></label>
+                <input type="text" id="wbName" name="name" autocomplete="name" maxlength="80" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="wbDate" data-i18n="booking.date"></label>
+                <input type="date" id="wbDate" name="date" required />
+              </div>
+              <div class="field">
+                <label for="wbTime" data-i18n="booking.time"></label>
+                <input type="time" id="wbTime" name="time" step="900" required />
+              </div>
+            </div>
+            <!-- Honeypot: hidden from users, catches spam bots (FR-SEC) -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="wbCompany">Company</label>
+              <input type="text" id="wbCompany" name="company" tabindex="-1" autocomplete="off" />
+            </div>
+            <p class="form-error" id="wbError" role="alert" hidden></p>
+            <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+                <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.8 1.7.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/>
+              </svg>
+              <span data-i18n="booking.send">Book via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Phase 2: manage (cancel / reschedule) mounts here -->
+        <div id="manageMount" hidden></div>
+      </div>
+    </section>
+
+    <!-- ======================= Barbers ======================= -->
+    <section class="section" id="barbers">
+      <div class="container">
+        <h2 class="section-title" data-i18n="barbers.title">Meet the barbers</h2>
+        <p class="section-sub" data-i18n="barbers.subtitle"></p>
+        <ul class="cards barbers-grid" id="barbersList"></ul>
+      </div>
+    </section>
+
+    <!-- ======================= Gallery ======================= -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title" data-i18n="gallery.title">Our work</h2>
+        <p class="section-sub" data-i18n="gallery.subtitle"></p>
+        <div class="gallery-grid">
+          <!-- Replace these SVG placeholders with real photos: see docs/MAINTENANCE_GUIDE.md -->
+          <figure class="gallery-card"><img src="img/cut-1.svg" alt="" loading="lazy" width="300" height="360" />
+            <figcaption><span data-i18n="gallery.before"></span> · <b data-i18n="services.names.haircut"></b></figcaption></figure>
+          <figure class="gallery-card"><img src="img/cut-2.svg" alt="" loading="lazy" width="300" height="360" />
+            <figcaption><span data-i18n="gallery.after"></span> · <b data-i18n="services.names.haircut"></b></figcaption></figure>
+          <figure class="gallery-card"><img src="img/cut-3.svg" alt="" loading="lazy" width="300" height="360" />
+            <figcaption><span data-i18n="gallery.after"></span> · <b data-i18n="services.names.beard"></b></figcaption></figure>
+          <figure class="gallery-card gallery-video" id="galleryVideo">
+            <div class="video-placeholder" role="img" aria-label="Shop video placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <figcaption><b data-i18n="gallery.videoTitle"></b> — <span data-i18n="gallery.videoCaption"></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Walk-in status ======================= -->
+    <section class="banner" id="walkin" aria-live="polite">
+      <div class="container banner-inner">
+        <h2 class="banner-title" data-i18n="walkin.title"></h2>
+        <p class="walkin-status" id="walkinStatus">…</p>
+        <p class="walkin-updated" id="walkinUpdated"></p>
+      </div>
+    </section>
+
+    <!-- ======================= Loyalty ======================= -->
+    <section class="banner banner-loyalty" id="loyalty">
+      <div class="container banner-inner">
+        <h2 class="banner-title" data-i18n="loyalty.title"></h2>
+        <p class="banner-text" data-i18n="loyalty.text"></p>
+        <a class="btn btn-outline" href="#contact" data-i18n="loyalty.cta"></a>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title" data-i18n="faq.title">FAQ</h2>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ======================= Contact ======================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact.title">Find us</h2>
+        <p class="section-sub" data-i18n="contact.subtitle"></p>
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h3 data-i18n="contact.addressLabel"></h3>
+            <p class="contact-value" id="shopAddress">12, Avenue Habib Bourguiba, 1000 Tunis</p>
+            <h3 data-i18n="contact.phoneLabel"></h3>
+            <p class="contact-value"><a class="contact-link" id="phoneLink" href="tel:+21622345678">+216 22 345 678</a></p>
+            <h3 data-i18n="contact.whatsappLabel"></h3>
+            <p class="contact-value"><a class="contact-link" id="waContactLink" href="#" rel="noopener">WhatsApp</a></p>
+            <div class="contact-actions">
+              <a class="btn btn-outline" id="callBtn" href="tel:+21622345678" data-i18n="contact.call"></a>
+              <a class="btn btn-whatsapp" id="waBtn" href="#" rel="noopener" data-i18n="contact.chat"></a>
+              <a class="btn btn-outline" id="mapBtn" href="#" target="_blank" rel="noopener" data-i18n="contact.map"></a>
+            </div>
+          </div>
+          <div class="card hours-card">
+            <h3 data-i18n="contact.hoursTitle"></h3>
+            <table class="hours-table" id="hoursTable">
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= Footer ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand" id="footerBrand">Salim Barber Shop</p>
+      <p class="footer-tagline" data-i18n="footer.tagline"></p>
+      <button type="button" class="link-btn" id="privacyOpen" data-i18n="privacy.link"></button>
+      <p class="footer-copy">© <span id="year">2026</span> Salim Barber Shop — <span data-i18n="footer.rights"></span></p>
+    </div>
+  </footer>
+
+  <!-- Privacy dialog (content per language from translations) -->
+  <dialog id="privacyDialog" class="privacy-dialog" aria-labelledby="privacyTitle">
+    <article>
+      <h2 id="privacyTitle" data-i18n="privacy.title"></h2>
+      <p data-i18n="privacy.p1"></p>
+      <p data-i18n="privacy.p2"></p>
+      <p data-i18n="privacy.p3"></p>
+      <button type="button" class="btn btn-primary" id="privacyClose" data-i18n="privacy.close"></button>
+    </article>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <noscript>
+    <p style="text-align:center;padding:1rem">
+      JavaScript is disabled — call us to book:
+      <a href="tel:+21622345678">+216 22 345 678</a>
+    </p>
+  </noscript>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

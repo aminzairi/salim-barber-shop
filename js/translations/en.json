@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Salim Barber Shop — Book online | Tunis",
+    "description": "Book your haircut or beard trim online in 60 seconds. Salim Barber Shop, Avenue Habib Bourguiba, Tunis. Open Monday to Saturday, 9:00–20:00."
+  },
+  "nav": {
+    "services": "Services",
+    "booking": "Booking",
+    "barbers": "Our barbers",
+    "gallery": "Gallery",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book now",
+    "skipToContent": "Skip to main content",
+    "langLabel": "Choose language",
+    "toggleMenu": "Open menu"
+  },
+  "hero": {
+    "tagline": "Traditional craft. Modern style.",
+    "sub": "Book your seat in 60 seconds — no waiting, no phone calls.",
+    "cta": "Book now",
+    "today": "Today: {hours}",
+    "closedToday": "Closed today",
+    "openNow": "Open now",
+    "closedNow": "Closed now"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Clear prices, quality work — every time.",
+    "min": "{n} min",
+    "price": "{price} TND",
+    "book": "Book",
+    "names": {
+      "haircut": "Haircut",
+      "beard": "Beard trim",
+      "haircut-beard": "Haircut + beard",
+      "kids": "Kids haircut"
+    }
+  },
+  "barbers": {
+    "title": "Meet the barbers",
+    "subtitle": "Three pairs of hands, one standard of quality.",
+    "specialty": "Specialty",
+    "names": {
+      "salim": "Salim",
+      "karim": "Karim",
+      "yassine": "Yassine"
+    },
+    "specialties": {
+      "salim": "Fades & classic cuts",
+      "karim": "Beard sculpting & straight-razor shave",
+      "yassine": "Kids cuts & modern styles"
+    }
+  },
+  "gallery": {
+    "title": "Our work",
+    "subtitle": "Before / after — the results speak for themselves.",
+    "before": "Before",
+    "after": "After",
+    "videoTitle": "Shop video",
+    "videoCaption": "A 30-second tour of the shop — coming soon."
+  },
+  "walkin": {
+    "title": "No appointment? No problem.",
+    "waiting": "{count} people waiting",
+    "eta": "about {minutes} min wait",
+    "noQueue": "No queue right now — walk in!",
+    "updated": "Updated {time}"
+  },
+  "loyalty": {
+    "title": "Every 10th haircut is on us",
+    "text": "Ask for your loyalty card at the shop. Come 9 times, the 10th haircut is free.",
+    "cta": "Ask for your card"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What payment methods do you accept?",
+        "a": "Cash and bank card, on site. No online payment is required to book."
+      },
+      {
+        "q": "Do you cut children's hair?",
+        "a": "Yes! We have a dedicated kids haircut service (25 min), and Yassine is our specialist for little ones."
+      },
+      {
+        "q": "Can I walk in without an appointment?",
+        "a": "Of course. Check the live waiting status on this page — if the queue is short, just come by. Booking online still guarantees your slot."
+      },
+      {
+        "q": "Can I cancel my appointment?",
+        "a": "Yes, free cancellation up to 3 hours before your appointment, from the confirmation screen or the link in your reminder."
+      },
+      {
+        "q": "Can I reschedule?",
+        "a": "Yes, with your booking reference you can move your appointment to any free slot, up to 3 hours before the original time."
+      },
+      {
+        "q": "How does the loyalty card work?",
+        "a": "Each haircut earns a stamp. On your 10th visit, that haircut is free. Cards are available at the shop."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Find us",
+    "subtitle": "In the heart of Tunis, on Avenue Habib Bourguiba.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "call": "Call",
+    "chat": "Chat on WhatsApp",
+    "map": "Open in Maps",
+    "hoursTitle": "Opening hours",
+    "closed": "Closed",
+    "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  },
+  "booking": {
+    "title": "Book your appointment",
+    "subtitle": "Send your request on WhatsApp — we confirm in minutes.",
+    "intro": "Fill in your details and tap the button: WhatsApp opens with your message ready to send.",
+    "service": "Service",
+    "date": "Preferred date",
+    "time": "Preferred time",
+    "name": "Your name",
+    "send": "Book via WhatsApp",
+    "errors": {
+      "name": "Please enter your name.",
+      "service": "Please choose a service.",
+      "date": "Please choose a date.",
+      "datePast": "Please choose today or a later date.",
+      "dateClosed": "We are closed on that day. Please choose another date.",
+      "time": "Please choose a time."
+    }
+  },
+  "wizard": {
+    "title": "Book your appointment",
+    "subtitle": "4 quick steps — your seat is guaranteed instantly.",
+    "steps": ["Service", "Date & time", "Your details", "Review"],
+    "chooseService": "Which service do you need?",
+    "chooseBarber": "Preferred barber?",
+    "anyBarber": "Any barber",
+    "chooseDate": "Pick a date",
+    "chooseTime": "Pick a time",
+    "noSlots": "No slots left on this day. Please try another date.",
+    "loadingSlots": "Loading available times…",
+    "back": "Back",
+    "next": "Continue",
+    "confirm": "Confirm booking",
+    "fullName": "Full name",
+    "phone": "Phone",
+    "phoneHint": "Tunisian number, e.g. 22 123 456",
+    "email": "Email (optional)",
+    "note": "Note (optional)",
+    "notePlaceholder": "Anything we should know?",
+    "review": "Review your booking",
+    "reviewService": "Service",
+    "reviewBarber": "Barber",
+    "reviewWhen": "When",
+    "reviewPrice": "Price",
+    "reviewDuration": "Duration",
+    "policy": "Free cancellation up to {hours} hours before the appointment.",
+    "sending": "Confirming…",
+    "errors": {
+      "name": "Please enter your full name (at least 3 characters).",
+      "phone": "Please enter a valid Tunisian phone number (8 digits, e.g. 22 123 456).",
+      "email": "Please enter a valid email address.",
+      "taken": "Sorry, that slot was just booked. Please choose another time.",
+      "generic": "Something went wrong. Please try again, or book via WhatsApp."
+    }
+  },
+  "confirmation": {
+    "title": "You're booked! ✂️",
+    "subtitle": "Your appointment is confirmed. See you soon!",
+    "ref": "Reference",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "addToCalendar": "Add to calendar",
+    "whatsappConfirm": "Confirm via WhatsApp",
+    "review": "Leave a Google review",
+    "demo": "Demo mode: this booking is stored on this device only, and no reminder will be sent."
+  },
+  "manage": {
+    "title": "Manage your booking",
+    "intro": "Enter your reference number to view, cancel or reschedule your appointment.",
+    "refLabel": "Booking reference (e.g. SB-4F7K2A)",
+    "find": "Find my booking",
+    "notFound": "No booking found with this reference. Check the code or contact us.",
+    "yourBooking": "Your appointment",
+    "cancel": "Cancel appointment",
+    "cancelConfirm": "Really cancel this appointment?",
+    "cancelled": "Your appointment has been cancelled.",
+    "cancelDenied": "Free cancellation has expired (up to {hours} hours before). Please call us.",
+    "reschedule": "Reschedule",
+    "newDate": "New date",
+    "newTime": "New time",
+    "rescheduleOk": "Your appointment has been moved.",
+    "slotTaken": "That slot is not available. Please pick another one.",
+    "back": "Back to the shop"
+  },
+  "privacy": {
+    "link": "Privacy notice",
+    "title": "Privacy notice",
+    "p1": "We collect only what a booking needs: your name, your phone number and, if you choose, your email and a short note. We use them solely to manage your appointment and, if you wish, to send you a reminder.",
+    "p2": "Data is stored securely, is never sold or shared with third parties, and is deleted on request. We comply with Tunisian organic law 2004-63 on personal data protection (INPDP) and apply GDPR principles for visitors from the EU.",
+    "p3": "You may access, correct or delete your data at any time via WhatsApp or by phone. Deleting your booking deletes your data.",
+    "close": "Close"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Traditional craft, modern style — Tunis."
+  },
+  "whatsapp": {
+    "bookingMsg": "Hello {shop}! 👋 I'd like to book:\n• Service: {service}\n• Date: {date}\n• Time: {time}\n• Name: {name}\nSee you soon!",
+    "confirmMsg": "Hello {shop}! I confirm my appointment {ref}: {service} on {date} at {time}."
+  },
+  "admin": {
+    "title": "Admin — Bookings",
+    "login": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "logout": "Sign out",
+    "wrongCredentials": "Invalid email or password.",
+    "bookingsTitle": "Upcoming bookings",
+    "noBookings": "No upcoming bookings.",
+    "thRef": "Ref",
+    "thDate": "Date",
+    "thTime": "Time",
+    "thCustomer": "Customer",
+    "thPhone": "Phone",
+    "thService": "Service",
+    "thBarber": "Barber",
+    "thStatus": "Status",
+    "thActions": "Actions",
+    "cancel": "Cancel",
+    "blockTitle": "Block a slot",
+    "blockBarber": "Barber",
+    "blockDate": "Date",
+    "blockStart": "Start",
+    "blockDuration": "Duration (min)",
+    "blockReason": "Reason (optional)",
+    "blockBtn": "Block",
+    "blockOk": "Slot blocked.",
+    "walkinTitle": "Walk-in status",
+    "walkinWaiting": "People waiting",
+    "walkinEta": "Estimated wait (min)",
+    "walkinSave": "Update",
+    "walkinOk": "Walk-in status updated.",
+    "statuses": {
+      "booked": "Booked",
+      "cancelled": "Cancelled",
+      "blocked": "Blocked",
+      "completed": "Completed"
+    }
+  },
+  "misc": {
+    "demoMode": "Demo mode — bookings are saved on this device only.",
+    "loading": "Loading…",
+    "required": "Required"
+  }
+}

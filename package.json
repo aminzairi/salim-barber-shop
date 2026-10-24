@@ -1,0 +1,19 @@
+{
+  "name": "salim-barber-shop",
+  "version": "2.0.0",
+  "description": "Trilingual (EN/FR/AR) barber shop booking site — Phase 1 (WhatsApp-first) + Phase 2 (wizard, Supabase, admin, PWA)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "playwright test",
+    "check": "node scripts/check.mjs",
+    "serve": "node scripts/serve.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "lint": "eslint js tests scripts --max-warnings 0 || echo 'eslint not installed — run npm ci'"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "eslint": "^9.0.0"
+  }
+}

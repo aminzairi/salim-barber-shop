@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Salim Barber Shop — Réservez en ligne | Tunis",
+    "description": "Réservez votre coupe ou taille de barbe en ligne en 60 secondes. Salim Barber Shop, Avenue Habib Bourguiba, Tunis. Ouvert du lundi au samedi, 9h–20h."
+  },
+  "nav": {
+    "services": "Services",
+    "booking": "Réservation",
+    "barbers": "Nos barbiers",
+    "gallery": "Galerie",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Réserver",
+    "skipToContent": "Aller au contenu principal",
+    "langLabel": "Choisir la langue",
+    "toggleMenu": "Ouvrir le menu"
+  },
+  "hero": {
+    "tagline": "Savoir-faire traditionnel, style moderne.",
+    "sub": "Réservez votre place en 60 secondes — sans attente, sans appels.",
+    "cta": "Réserver",
+    "today": "Aujourd'hui : {hours}",
+    "closedToday": "Fermé aujourd'hui",
+    "openNow": "Ouvert",
+    "closedNow": "Fermé"
+  },
+  "services": {
+    "title": "Nos services",
+    "subtitle": "Des prix clairs, un travail soigné — à chaque fois.",
+    "min": "{n} min",
+    "price": "{price} DT",
+    "book": "Réserver",
+    "names": {
+      "haircut": "Coupe",
+      "beard": "Taille de barbe",
+      "haircut-beard": "Coupe + barbe",
+      "kids": "Coupe enfant"
+    }
+  },
+  "barbers": {
+    "title": "Nos barbiers",
+    "subtitle": "Trois paires de mains, une seule exigence : la qualité.",
+    "specialty": "Spécialité",
+    "names": {
+      "salim": "Salim",
+      "karim": "Karim",
+      "yassine": "Yassine"
+    },
+    "specialties": {
+      "salim": "Dégradés & coupes classiques",
+      "karim": "Sculpture de barbe & rasage au coupe-chou",
+      "yassine": "Coupes enfants & styles modernes"
+    }
+  },
+  "gallery": {
+    "title": "Nos réalisations",
+    "subtitle": "Avant / après — le résultat parle de lui-même.",
+    "before": "Avant",
+    "after": "Après",
+    "videoTitle": "Vidéo du salon",
+    "videoCaption": "Une visite du salon en 30 secondes — bientôt disponible."
+  },
+  "walkin": {
+    "title": "Sans rendez-vous ? Pas de souci.",
+    "waiting": "{count} personne(s) en attente",
+    "eta": "environ {minutes} min d'attente",
+    "noQueue": "Aucune attente pour le moment — venez !",
+    "updated": "Mis à jour à {time}"
+  },
+  "loyalty": {
+    "title": "La 10ᵉ coupe est offerte",
+    "text": "Demandez votre carte de fidélité au salon. Venez 9 fois, la 10ᵉ coupe est gratuite.",
+    "cta": "Demander ma carte"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Quels moyens de paiement acceptez-vous ?",
+        "a": "Espèces et carte bancaire, sur place. Aucun paiement en ligne n'est demandé pour réserver."
+      },
+      {
+        "q": "Coupez-vous les cheveux des enfants ?",
+        "a": "Bien sûr ! Nous proposons une coupe enfant dédiée (25 min), et Yassine est notre spécialiste des plus petits."
+      },
+      {
+        "q": "Peut-on venir sans rendez-vous ?",
+        "a": "Évidemment. Consultez l'attente en direct sur cette page — si la file est courte, passez directement. Réserver en ligne garantit toutefois votre créneau."
+      },
+      {
+        "q": "Puis-je annuler mon rendez-vous ?",
+        "a": "Oui, annulation gratuite jusqu'à 3 heures avant le rendez-vous, depuis l'écran de confirmation ou le lien de votre rappel."
+      },
+      {
+        "q": "Puis-je reporter mon rendez-vous ?",
+        "a": "Oui, avec votre référence de réservation vous pouvez déplacer votre rendez-vous vers tout créneau libre, jusqu'à 3 heures avant l'heure initiale."
+      },
+      {
+        "q": "Comment fonctionne la carte de fidélité ?",
+        "a": "Chaque coupe vaut un tampon. À votre 10ᵉ visite, la coupe est offerte. Les cartes sont disponibles au salon."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Nous trouver",
+    "subtitle": "Au cœur de Tunis, sur l'Avenue Habib Bourguiba.",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "whatsappLabel": "WhatsApp",
+    "call": "Appeler",
+    "chat": "Discuter sur WhatsApp",
+    "map": "Ouvrir dans Maps",
+    "hoursTitle": "Horaires d'ouverture",
+    "closed": "Fermé",
+    "days": ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]
+  },
+  "booking": {
+    "title": "Réservez votre rendez-vous",
+    "subtitle": "Envoyez votre demande sur WhatsApp — confirmation en quelques minutes.",
+    "intro": "Remplissez vos informations et appuyez sur le bouton : WhatsApp s'ouvre avec votre message prêt à envoyer.",
+    "service": "Service",
+    "date": "Date souhaitée",
+    "time": "Heure souhaitée",
+    "name": "Votre nom",
+    "send": "Réserver via WhatsApp",
+    "errors": {
+      "name": "Veuillez saisir votre nom.",
+      "service": "Veuillez choisir un service.",
+      "date": "Veuillez choisir une date.",
+      "datePast": "Veuillez choisir aujourd'hui ou une date ultérieure.",
+      "dateClosed": "Nous sommes fermés ce jour-là. Veuillez choisir une autre date.",
+      "time": "Veuillez choisir une heure."
+    }
+  },
+  "wizard": {
+    "title": "Réservez votre rendez-vous",
+    "subtitle": "4 étapes rapides — votre place est garantie immédiatement.",
+    "steps": ["Service", "Date & heure", "Vos coordonnées", "Récapitulatif"],
+    "chooseService": "Quel service souhaitez-vous ?",
+    "chooseBarber": "Barbier préféré ?",
+    "anyBarber": "Peu importe",
+    "chooseDate": "Choisissez une date",
+    "chooseTime": "Choisissez une heure",
+    "noSlots": "Plus de créneaux ce jour-là. Essayez une autre date.",
+    "loadingSlots": "Chargement des horaires disponibles…",
+    "back": "Retour",
+    "next": "Continuer",
+    "confirm": "Confirmer la réservation",
+    "fullName": "Nom complet",
+    "phone": "Téléphone",
+    "phoneHint": "Numéro tunisien, ex. 22 123 456",
+    "email": "E-mail (facultatif)",
+    "note": "Note (facultatif)",
+    "notePlaceholder": "Quelque chose à savoir ?",
+    "review": "Vérifiez votre réservation",
+    "reviewService": "Service",
+    "reviewBarber": "Barbier",
+    "reviewWhen": "Quand",
+    "reviewPrice": "Prix",
+    "reviewDuration": "Durée",
+    "policy": "Annulation gratuite jusqu'à {hours} heures avant le rendez-vous.",
+    "sending": "Confirmation…",
+    "errors": {
+      "name": "Veuillez saisir votre nom complet (au moins 3 caractères).",
+      "phone": "Veuillez saisir un numéro tunisien valide (8 chiffres, ex. 22 123 456).",
+      "email": "Veuillez saisir une adresse e-mail valide.",
+      "taken": "Désolé, ce créneau vient d'être réservé. Veuillez choisir une autre heure.",
+      "generic": "Une erreur est survenue. Réessayez, ou réservez via WhatsApp."
+    }
+  },
+  "confirmation": {
+    "title": "C'est réservé ! ✂️",
+    "subtitle": "Votre rendez-vous est confirmé. À très bientôt !",
+    "ref": "Référence",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "addToCalendar": "Ajouter au calendrier",
+    "whatsappConfirm": "Confirmer via WhatsApp",
+    "review": "Laisser un avis Google",
+    "demo": "Mode démo : cette réservation est enregistrée uniquement sur cet appareil, aucun rappel ne sera envoyé."
+  },
+  "manage": {
+    "title": "Gérer votre réservation",
+    "intro": "Saisissez votre référence pour consulter, annuler ou reporter votre rendez-vous.",
+    "refLabel": "Référence de réservation (ex. SB-4F7K2A)",
+    "find": "Rechercher",
+    "notFound": "Aucune réservation trouvée avec cette référence. Vérifiez le code ou contactez-nous.",
+    "yourBooking": "Votre rendez-vous",
+    "cancel": "Annuler le rendez-vous",
+    "cancelConfirm": "Annuler vraiment ce rendez-vous ?",
+    "cancelled": "Votre rendez-vous a été annulé.",
+    "cancelDenied": "L'annulation gratuite est expirée (jusqu'à {hours} heures avant). Merci de nous appeler.",
+    "reschedule": "Reporter",
+    "newDate": "Nouvelle date",
+    "newTime": "Nouvelle heure",
+    "rescheduleOk": "Votre rendez-vous a été déplacé.",
+    "slotTaken": "Ce créneau n'est pas disponible. Choisissez-en un autre.",
+    "back": "Retour au salon"
+  },
+  "privacy": {
+    "link": "Politique de confidentialité",
+    "title": "Politique de confidentialité",
+    "p1": "Nous collectons uniquement ce qu'une réservation exige : votre nom, votre numéro de téléphone et, si vous le souhaitez, votre e-mail et une courte note. Ces données servent exclusivement à gérer votre rendez-vous et, si vous le souhaitez, à vous envoyer un rappel.",
+    "p2": "Les données sont stockées de manière sécurisée, ne sont jamais vendues ni partagées avec des tiers, et sont supprimées sur demande. Nous respectons la loi organique tunisienne 2004-63 relative à la protection des données personnelles (INPDP) et appliquons les principes du RGPD pour les visiteurs de l'UE.",
+    "p3": "Vous pouvez accéder à vos données, les rectifier ou les supprimer à tout moment via WhatsApp ou par téléphone. Supprimer votre réservation supprime vos données.",
+    "close": "Fermer"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "tagline": "Savoir-faire traditionnel, style moderne — Tunis."
+  },
+  "whatsapp": {
+    "bookingMsg": "Bonjour {shop} ! 👋 Je souhaite réserver :\n• Service : {service}\n• Date : {date}\n• Heure : {time}\n• Nom : {name}\nÀ bientôt !",
+    "confirmMsg": "Bonjour {shop} ! Je confirme mon rendez-vous {ref} : {service} le {date} à {time}."
+  },
+  "admin": {
+    "title": "Admin — Réservations",
+    "login": "Se connecter",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "logout": "Se déconnecter",
+    "wrongCredentials": "E-mail ou mot de passe invalide.",
+    "bookingsTitle": "Réservations à venir",
+    "noBookings": "Aucune réservation à venir.",
+    "thRef": "Réf.",
+    "thDate": "Date",
+    "thTime": "Heure",
+    "thCustomer": "Client",
+    "thPhone": "Téléphone",
+    "thService": "Service",
+    "thBarber": "Barbier",
+    "thStatus": "Statut",
+    "thActions": "Actions",
+    "cancel": "Annuler",
+    "blockTitle": "Bloquer un créneau",
+    "blockBarber": "Barbier",
+    "blockDate": "Date",
+    "blockStart": "Début",
+    "blockDuration": "Durée (min)",
+    "blockReason": "Motif (facultatif)",
+    "blockBtn": "Bloquer",
+    "blockOk": "Créneau bloqué.",
+    "walkinTitle": "Statut sans rendez-vous",
+    "walkinWaiting": "Personnes en attente",
+    "walkinEta": "Attente estimée (min)",
+    "walkinSave": "Mettre à jour",
+    "walkinOk": "Statut mis à jour.",
+    "statuses": {
+      "booked": "Réservé",
+      "cancelled": "Annulé",
+      "blocked": "Bloqué",
+      "completed": "Terminé"
+    }
+  },
+  "misc": {
+    "demoMode": "Mode démo — les réservations sont enregistrées uniquement sur cet appareil.",
+    "loading": "Chargement…",
+    "required": "Obligatoire"
+  }
+}

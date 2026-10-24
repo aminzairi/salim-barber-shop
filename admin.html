@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Salim Barber Shop</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0e0e10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;600;800&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-name" id="brandName">Salim Barber Shop</span>
+      </a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.langLabel">
+          <button type="button" class="lang-btn" data-lang="en" lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="fr" lang="fr" aria-pressed="true">FR</button>
+          <button type="button" class="lang-btn" data-lang="ar" lang="ar">AR</button>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="logoutBtn" hidden data-i18n="admin.logout"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container admin-wrap">
+
+      <!-- Login -->
+      <div class="card admin-login" id="loginCard">
+        <h1 class="section-title" data-i18n="admin.title" style="font-size:1.4rem"></h1>
+        <form id="loginForm" novalidate>
+          <div class="field" style="margin-block-end:.9rem">
+            <label for="adEmail" data-i18n="admin.email"></label>
+            <input type="email" id="adEmail" autocomplete="username" required />
+          </div>
+          <div class="field" style="margin-block-end:1rem">
+            <label for="adPass" data-i18n="admin.password"></label>
+            <input type="password" id="adPass" autocomplete="current-password" required minlength="8" />
+          </div>
+          <p class="form-error" id="adErr" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="admin.login"></button>
+        </form>
+      </div>
+
+      <!-- Dashboard -->
+      <div id="dashboard" hidden>
+        <h1 class="section-title" data-i18n="admin.bookingsTitle" style="font-size:1.4rem"></h1>
+
+        <div class="admin-toolbar">
+          <div class="card" style="flex:1;min-width:260px">
+            <h3 style="margin-block-start:0" data-i18n="admin.blockTitle"></h3>
+            <form id="blockForm" class="form-row" style="margin-block-end:0">
+              <div class="field">
+                <label for="blBarber" data-i18n="admin.blockBarber"></label>
+                <select id="blBarber"></select>
+              </div>
+              <div class="field">
+                <label for="blDate" data-i18n="admin.blockDate"></label>
+                <input type="date" id="blDate" required />
+              </div>
+              <div class="field">
+                <label for="blStart" data-i18n="admin.blockStart"></label>
+                <input type="time" id="blStart" step="900" required />
+              </div>
+              <div class="field">
+                <label for="blDur" data-i18n="admin.blockDuration"></label>
+                <input type="number" id="blDur" min="15" max="240" step="15" value="30" />
+              </div>
+              <div class="field" style="grid-column:1/-1">
+                <label for="blReason" data-i18n="admin.blockReason"></label>
+                <input type="text" id="blReason" maxlength="120" />
+              </div>
+              <button type="submit" class="btn btn-outline" data-i18n="admin.blockBtn"></button>
+            </form>
+          </div>
+
+          <div class="card" style="flex:1;min-width:260px">
+            <h3 style="margin-block-start:0" data-i18n="admin.walkinTitle"></h3>
+            <form id="walkinForm" class="form-row" style="margin-block-end:0">
+              <div class="field">
+                <label for="wiWaiting" data-i18n="admin.walkinWaiting"></label>
+                <input type="number" id="wiWaiting" min="0" max="30" value="0" />
+              </div>
+              <div class="field">
+                <label for="wiEta" data-i18n="admin.walkinEta"></label>
+                <input type="number" id="wiEta" min="0" max="240" step="5" value="20" />
+              </div>
+              <button type="submit" class="btn btn-outline" data-i18n="admin.walkinSave"></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card" style="overflow-x:auto">
+          <table class="admin-table" id="bookingsTable">
+            <thead>
+              <tr>
+                <th data-i18n="admin.thRef"></th><th data-i18n="admin.thDate"></th>
+                <th data-i18n="admin.thTime"></th><th data-i18n="admin.thCustomer"></th>
+                <th data-i18n="admin.thPhone"></th><th data-i18n="admin.thService"></th>
+                <th data-i18n="admin.thBarber"></th><th data-i18n="admin.thStatus"></th>
+                <th data-i18n="admin.thActions"></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <p id="noBookings" hidden data-i18n="admin.noBookings"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

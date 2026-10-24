@@ -1,0 +1,245 @@
+openapi: 3.1.0
+info:
+  title: Salim Barber Shop Booking API
+  version: 2.0.0
+  description: >
+    Trilingual (EN/FR/AR) barber-shop booking API. Public surface is exposed as
+    Supabase RPC functions (POST /rest/v1/rpc/{fn}); admin surface requires a
+    Supabase Auth JWT belonging to a row of the `admins` table (RLS-enforced).
+    All booking times are shop-local (Africa/Tunis) "YYYY-MM-DD"/"HH:MM" strings.
+servers:
+  - url: https://YOUR-PROJECT.supabase.co/rest/v1
+    description: Supabase REST gateway (replace YOUR-PROJECT)
+security:
+  - apiKey: []
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: apikey
+      description: Supabase anon key (safe for browsers)
+    adminBearer:
+      type: http
+      scheme: bearer
+      description: Supabase Auth access token of an admin user
+  schemas:
+    Error:
+      type: object
+      properties:
+        code: { type: string, example: SLOT_TAKEN }
+        message: { type: string, example: Slot taken }
+        hint: { type: string }
+    BookingResult:
+      type: object
+      properties:
+        ref: { type: string, example: SB-7K4F2A }
+        serviceId: { type: string, example: haircut }
+        barberId: { type: string, example: salim }
+        date: { type: string, format: date, example: "2026-10-24" }
+        start: { type: string, example: "14:30" }
+        end: { type: string, example: "15:00" }
+        status: { type: string, example: booked }
+    BusyInterval:
+      type: object
+      properties:
+        start: { type: string, example: "09:00" }
+        end: { type: string, example: "09:30" }
+        barber_id: { type: string, example: salim }
+        status: { type: string, example: booked }
+paths:
+  /rpc/busy_intervals:
+    post:
+      summary: Busy intervals for one date (slot rendering)
+      tags: [public]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_date]
+              properties:
+                p_date: { type: string, format: date }
+      responses:
+        "200":
+          description: List of busy intervals (bookings + admin blocks)
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: "#/components/schemas/BusyInterval" }
+  /rpc/available_slots:
+    post:
+      summary: Available start times for a service/date/barber
+      tags: [public]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_service_id, p_date]
+              properties:
+                p_service_id: { type: string }
+                p_date: { type: string, format: date }
+                p_barber_id: { type: string, nullable: true, description: omit or "any" for any barber }
+      responses:
+        "200":
+          description: Slots with the barbers free on each
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    slot: { type: string, example: "10:15" }
+                    free_barbers: { type: array, items: { type: string } }
+  /rpc/create_booking:
+    post:
+      summary: Create a booking (atomic, no double-booking)
+      description: |
+        Conflict handling: a concurrent or overlapping request fails with
+        error code SLOT_TAKEN (HTTP 409 semantics). Anti-spam: max 3 future
+        active bookings per phone (TOO_MANY_ACTIVE). Past/too-soon slots
+        rejected (SLOT_PAST). Honeypot fields are simply never sent by the UI.
+      tags: [public]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_service_id, p_date, p_start, p_name, p_phone]
+              properties:
+                p_service_id: { type: string, example: haircut }
+                p_barber_id: { type: string, nullable: true, example: null }
+                p_date: { type: string, format: date, example: "2026-10-24" }
+                p_start: { type: string, example: "14:30" }
+                p_name: { type: string, example: Ahmed Ben Salah }
+                p_phone: { type: string, example: "+21622123456" }
+                p_email: { type: string, nullable: true }
+                p_note: { type: string, nullable: true }
+                p_locale: { type: string, enum: [en, fr, ar], example: fr }
+      responses:
+        "200":
+          description: Booking created (queue: owner alert + 2h reminder)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/BookingResult" }
+        default:
+          description: Error (SLOT_TAKEN / BAD_SERVICE / SLOT_PAST / TOO_MANY_ACTIVE)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+  /rpc/get_booking:
+    post:
+      summary: Look up a booking by reference (ref acts as capability token)
+      tags: [public]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_ref]
+              properties:
+                p_ref: { type: string, example: SB-7K4F2A }
+      responses:
+        "200":
+          description: Booking summary (or null when unknown)
+  /rpc/cancel_booking:
+    post:
+      summary: Cancel by reference (free until 3h before start)
+      tags: [public]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_ref]
+              properties:
+                p_ref: { type: string }
+                p_force: { type: boolean, default: false, description: admin only }
+      responses:
+        "200": { description: '{ "ok": true }' }
+        default:
+          description: Error (NOT_FOUND / CANCEL_WINDOW_EXPIRED)
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Error" }
+  /rpc/reschedule_booking:
+    post:
+      summary: Move a booking to a new date/time (guarded, no double-booking)
+      tags: [public]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_ref, p_date, p_start]
+              properties:
+                p_ref: { type: string }
+                p_date: { type: string, format: date }
+                p_start: { type: string, example: "16:00" }
+                p_barber_id: { type: string, nullable: true }
+      responses:
+        "200": { description: '{ "ok": true, "ref": "SB-..." }' }
+        default:
+          description: Error (NOT_FOUND / SLOT_TAKEN / CANCEL_WINDOW_EXPIRED)
+  /bookings_view:
+    get:
+      summary: Admin — upcoming bookings
+      tags: [admin]
+      security: [{ apiKey: [], adminBearer: [] }]
+      parameters:
+        - { name: booking_date, in: query, schema: { type: string, format: date } }
+        - { name: order, in: query, schema: { type: string, example: "booking_date.asc,start_time.asc" } }
+      responses:
+        "200":
+          description: Table rows (empty for non-admins)
+  /rpc/block_slot:
+    post:
+      summary: Admin — block a time range for a barber
+      tags: [admin]
+      security: [{ apiKey: [], adminBearer: [] }]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_date, p_start, p_end, p_barber_id]
+              properties:
+                p_date: { type: string, format: date }
+                p_start: { type: string, example: "12:00" }
+                p_end: { type: string, example: "13:00" }
+                p_barber_id: { type: string }
+                p_reason: { type: string, nullable: true }
+      responses:
+        "200": { description: '{ "ok": true, "ref": "SB-..." }' }
+        default:
+          description: Error (FORBIDDEN / SLOT_TAKEN)
+  /rpc/update_walk_in:
+    post:
+      summary: Admin — update the walk-in waiting status shown on the site
+      tags: [admin]
+      security: [{ apiKey: [], adminBearer: [] }]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [p_waiting, p_eta_minutes]
+              properties:
+                p_waiting: { type: integer, minimum: 0, maximum: 99 }
+                p_eta_minutes: { type: integer, minimum: 0, maximum: 480 }
+      responses:
+        "200": { description: '{ "ok": true }' }
+        default:
+          description: Error (FORBIDDEN)
+  /walk_in_status:
+    get:
+      summary: Public — current walk-in status
+      tags: [public]
+      responses:
+        "200":
+          description: Single row { waiting, eta_minutes, updated_at }

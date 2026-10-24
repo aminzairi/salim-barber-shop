@@ -1,0 +1,43 @@
+# Netlify configuration — static hosting with security headers.
+# Site settings: build command = none, publish directory = .
+
+[build]
+  publish = "."
+
+# --- Security headers (OWASP) on every response ------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https:;
+      connect-src 'self' https://*.supabase.co;
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self' https://wa.me"""
+
+# --- Service worker must never be cached --------------------------------------
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# --- Long cache for hashed/frozen assets ---------------------------------------
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# --- Old booking URL patterns stay on the page ---------------------------------
+[[redirects]]
+  from = "/book"
+  to = "/#booking"
+  status = 302
