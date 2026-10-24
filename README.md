@@ -1,5 +1,8 @@
 # Salim Barber Shop — trilingual online booking (EN / FR / العربية)
 
+> **Live site:** https://salim-barber-shop.netlify.app ·
+> **Repo:** https://github.com/aminzairi/salim-barber-shop
+
 Production-ready, mobile-first booking site for a Tunisian barbershop.
 **Phase 1:** static trilingual page + WhatsApp-first booking (no backend).
 **Phase 2:** 4-step booking wizard on Supabase, reminders, owner
